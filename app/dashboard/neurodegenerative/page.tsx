@@ -2,9 +2,12 @@
 
 import CategoryCard from '@/components/CategoryCard';
 import patientData from '@/data/mockPatient.json';
+import type { PatientData } from '@/types/patient';
+
+const typedPatientData = patientData as PatientData;
 
 export default function NeurodegenerativePage() {
-  const { neurodegenerative } = patientData;
+  const { neurodegenerative } = typedPatientData;
 
   const handleCitationClick = (citationId: string) => {
     const event = new CustomEvent('citation-click', { detail: citationId });

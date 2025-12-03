@@ -2,9 +2,12 @@
 
 import patientData from '@/data/mockPatient.json';
 import { AlertCircle, User, Calendar, FileText } from 'lucide-react';
+import type { PatientData } from '@/types/patient';
+
+const typedPatientData = patientData as PatientData;
 
 export default function DashboardOverview() {
-  const { overview } = patientData;
+  const { overview } = typedPatientData;
 
   const criticalAlerts = [
     { category: 'Cardiovascular', message: 'Likely pathogenic LDLR variant detected - Familial Hypercholesterolemia risk', priority: 'red' },

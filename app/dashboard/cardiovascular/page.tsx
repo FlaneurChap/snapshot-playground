@@ -3,12 +3,15 @@
 import { createContext, useContext, useState } from 'react';
 import CategoryCard from '@/components/CategoryCard';
 import patientData from '@/data/mockPatient.json';
+import type { PatientData } from '@/types/patient';
+
+const typedPatientData = patientData as PatientData;
 
 // Create a context for citation clicks
 const CitationContext = createContext<((citationId: string) => void) | null>(null);
 
 export default function CardiovascularPage() {
-  const { cardiovascular, citations } = patientData;
+  const { cardiovascular, citations } = typedPatientData;
   const [selectedCitationId, setSelectedCitationId] = useState<string | null>(null);
 
   const handleCitationClick = (citationId: string) => {
