@@ -10,11 +10,12 @@ interface Tab {
 }
 
 const tabs: Tab[] = [
-  { id: 'cardiovascular', label: 'Cardiovascular', path: '/dashboard/cardiovascular', status: 'high-risk' },
-  { id: 'neurodegenerative', label: 'Neurodegenerative', path: '/dashboard/neurodegenerative', status: 'watch' },
-  { id: 'metabolic', label: 'Wellness', path: '/dashboard/metabolic', status: 'watch' },
-  { id: 'longevity', label: 'Longevity', path: '/dashboard/longevity', status: 'optimized' },
-  { id: 'pharmacogenomic', label: 'Pharmacogenomic', path: '/dashboard/pharmacogenomic', status: 'high-risk' }
+  { id: 'overview', label: 'Overview', path: '/dashboard' },
+  { id: 'cardiovascular', label: 'Cardiovascular', path: '/dashboard/cardiovascular-v2', status: 'high-risk' },
+  { id: 'cognitive', label: 'Cognitive', path: '/dashboard/neurodegenerative', status: 'watch' },
+  { id: 'metabolic', label: 'Metabolic', path: '/dashboard/metabolic', status: 'watch' },
+  { id: 'pharmacogenomic', label: 'Pharmacogenomic', path: '/dashboard/pharmacogenomic', status: 'high-risk' },
+  { id: 'longevity', label: 'Longevity', path: '/dashboard/longevity', status: 'optimized' }
 ];
 
 export default function PanelTabs() {
@@ -31,7 +32,7 @@ export default function PanelTabs() {
     <div className="bg-white border-b border-gray-200 overflow-x-auto">
       <div className="flex gap-1 px-2 min-w-max">
         {tabs.map((tab) => {
-          const isActive = pathname === tab.path;
+          const isActive = pathname === tab.path || (tab.path !== '/dashboard' && pathname?.startsWith(tab.path));
           return (
             <button
               key={tab.id}
