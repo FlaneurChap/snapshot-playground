@@ -1,0 +1,429 @@
+{
+  "overview": {
+    "name": "Executive Patient",
+    "age": 23,
+    "gender": "Male",
+    "mrn": "GS-2024-0147",
+    "referralReason": "Preventive cardiovascular risk assessment - Genetic predisposition to FH and elevated Lp(a)",
+    "lastVisit": "2024-11-15",
+    "activeAlerts": 3
+  },
+  "cardiovascular": {
+    "lipids": {
+      "title": "Lipid Panel",
+      "status": "red",
+      "summary": "Elevated LDL-C with genetic risk factor suggests familial hypercholesterolemia",
+      "metrics": [
+        {
+          "name": "LDL Cholesterol",
+          "value": "140",
+          "unit": "mg/dL",
+          "status": "red",
+          "citationId": "1",
+          "referenceRange": "<100 mg/dL optimal",
+          "delta": {
+            "value": "8",
+            "direction": "up",
+            "percentage": 6
+          },
+          "trend": [
+            { "date": "2024-02", "value": 145 },
+            { "date": "2024-05", "value": 138 },
+            { "date": "2024-08", "value": 132 },
+            { "date": "2024-11", "value": 140 }
+          ]
+        },
+        {
+          "name": "HDL Cholesterol",
+          "value": "48",
+          "unit": "mg/dL",
+          "status": "yellow",
+          "citationId": "1",
+          "referenceRange": ">60 mg/dL optimal",
+          "delta": {
+            "value": "2",
+            "direction": "down",
+            "percentage": 4
+          },
+          "trend": [
+            { "date": "2024-02", "value": 52 },
+            { "date": "2024-05", "value": 50 },
+            { "date": "2024-08", "value": 50 },
+            { "date": "2024-11", "value": 48 }
+          ]
+        },
+        {
+          "name": "Triglycerides",
+          "value": "110",
+          "unit": "mg/dL",
+          "status": "green",
+          "citationId": "1",
+          "referenceRange": "<150 mg/dL",
+          "delta": {
+            "value": "15",
+            "direction": "down",
+            "percentage": 12
+          },
+          "trend": [
+            { "date": "2024-02", "value": 145 },
+            { "date": "2024-05", "value": 135 },
+            { "date": "2024-08", "value": 125 },
+            { "date": "2024-11", "value": 110 }
+          ]
+        },
+        {
+          "name": "Lp(a)",
+          "value": "85",
+          "unit": "nmol/L",
+          "status": "red",
+          "citationId": "2",
+          "referenceRange": "<75 nmol/L",
+          "notes": "Elevated Lp(a) is an independent cardiovascular risk factor",
+          "trend": [
+            { "date": "2024-02", "value": 82 },
+            { "date": "2024-11", "value": 85 }
+          ]
+        }
+      ]
+    },
+    "imaging": {
+      "title": "Cardiac Imaging",
+      "status": "yellow",
+      "summary": "Moderate coronary calcification detected",
+      "metrics": [
+        {
+          "name": "Coronary Artery Calcium Score",
+          "value": "120",
+          "unit": "Agatston units",
+          "status": "yellow",
+          "citationId": "3",
+          "referenceRange": "<100 low risk",
+          "notes": "Moderate plaque burden, 50-75th percentile for age"
+        },
+        {
+          "name": "Carotid IMT",
+          "value": "0.8",
+          "unit": "mm",
+          "status": "green",
+          "citationId": "4",
+          "referenceRange": "<0.9 mm normal"
+        }
+      ]
+    },
+    "inflammation": {
+      "title": "Inflammatory Markers",
+      "status": "yellow",
+      "summary": "Mild systemic inflammation present",
+      "metrics": [
+        {
+          "name": "hs-CRP",
+          "value": "2.8",
+          "unit": "mg/L",
+          "status": "yellow",
+          "citationId": "1",
+          "referenceRange": "<2.0 mg/L low risk",
+          "delta": {
+            "value": "0.3",
+            "direction": "up",
+            "percentage": 12
+          },
+          "trend": [
+            { "date": "2024-02", "value": 2.2 },
+            { "date": "2024-05", "value": 2.5 },
+            { "date": "2024-08", "value": 2.5 },
+            { "date": "2024-11", "value": 2.8 }
+          ]
+        },
+        {
+          "name": "Homocysteine",
+          "value": "11",
+          "unit": "μmol/L",
+          "status": "green",
+          "citationId": "1",
+          "referenceRange": "<15 μmol/L"
+        }
+      ]
+    },
+    "genetics": {
+      "title": "Cardiovascular Genetics",
+      "status": "red",
+      "summary": "Pathogenic LDLR variant (Exon 2-5 deletion) and high-risk LPA genotype - significant ASCVD risk",
+      "metrics": [
+        {
+          "name": "LDLR Gene",
+          "value": "Pathogenic Variant - Exon 2-5 Deletion",
+          "status": "red",
+          "citationId": "5",
+          "notes": "Heterozygous copy number loss (Exon 2-5 deletion) - Familial hypercholesterolemia (autosomal dominant). High risk of ASCVD."
+        },
+        {
+          "name": "LPA Gene",
+          "value": "High Risk - Elevated Lp(a) Predisposition",
+          "status": "red",
+          "citationId": "5",
+          "notes": "Genetic variants associated with elevated lipoprotein(a) levels - independent cardiovascular risk factor"
+        },
+        {
+          "name": "APOB Gene",
+          "value": "No Pathogenic Variants",
+          "status": "green",
+          "citationId": "5"
+        },
+        {
+          "name": "PCSK9 Gene",
+          "value": "No Pathogenic Variants",
+          "status": "green",
+          "citationId": "5"
+        }
+      ]
+    }
+  },
+  "neurodegenerative": {
+    "genetics": {
+      "title": "Alzheimer's Risk Genetics",
+      "status": "yellow",
+      "summary": "APOE4 heterozygous carrier - moderate increased risk",
+      "metrics": [
+        {
+          "name": "APOE Genotype",
+          "value": "ε3/ε4",
+          "status": "yellow",
+          "citationId": "5",
+          "notes": "Heterozygous APOE4 carrier - 3x increased AD risk vs ε3/ε3"
+        }
+      ]
+    },
+    "cognitiveScores": {
+      "title": "Cognitive Assessment",
+      "status": "green",
+      "summary": "Normal cognitive function for age",
+      "metrics": [
+        {
+          "name": "MoCA Score",
+          "value": "28",
+          "unit": "/30",
+          "status": "green",
+          "citationId": "6",
+          "referenceRange": "≥26 normal"
+        }
+      ]
+    }
+  },
+  "metabolic": {
+    "glucose": {
+      "title": "Glucose Metabolism",
+      "status": "yellow",
+      "summary": "Pre-diabetic range - intervention recommended",
+      "metrics": [
+        {
+          "name": "HbA1c",
+          "value": "5.8",
+          "unit": "%",
+          "status": "yellow",
+          "citationId": "1",
+          "referenceRange": "<5.7% normal",
+          "delta": {
+            "value": "0.2",
+            "direction": "up",
+            "percentage": 4
+          },
+          "trend": [
+            { "date": "2024-02", "value": 5.5 },
+            { "date": "2024-05", "value": 5.6 },
+            { "date": "2024-08", "value": 5.7 },
+            { "date": "2024-11", "value": 5.8 }
+          ]
+        },
+        {
+          "name": "Fasting Glucose",
+          "value": "105",
+          "unit": "mg/dL",
+          "status": "yellow",
+          "citationId": "1",
+          "referenceRange": "<100 mg/dL normal"
+        },
+        {
+          "name": "Average CGM Glucose",
+          "value": "108",
+          "unit": "mg/dL",
+          "status": "yellow",
+          "citationId": "7",
+          "referenceRange": "<100 mg/dL optimal",
+          "notes": "Based on 14-day continuous glucose monitoring"
+        }
+      ]
+    },
+    "insulin": {
+      "title": "Insulin Sensitivity",
+      "status": "yellow",
+      "summary": "Early insulin resistance detected",
+      "metrics": [
+        {
+          "name": "Fasting Insulin",
+          "value": "12",
+          "unit": "μIU/mL",
+          "status": "yellow",
+          "citationId": "1",
+          "referenceRange": "<10 μIU/mL optimal"
+        },
+        {
+          "name": "HOMA-IR",
+          "value": "3.1",
+          "status": "yellow",
+          "citationId": "1",
+          "referenceRange": "<2.0 optimal",
+          "notes": "Calculated from fasting glucose and insulin"
+        }
+      ]
+    }
+  },
+  "longevity": {
+    "fitness": {
+      "title": "Cardiorespiratory Fitness",
+      "status": "green",
+      "summary": "Excellent fitness for age",
+      "metrics": [
+        {
+          "name": "VO2 Max",
+          "value": "42",
+          "unit": "mL/kg/min",
+          "status": "green",
+          "citationId": "8",
+          "referenceRange": ">35 excellent for age",
+          "trend": [
+            { "date": "2024-02", "value": 40 },
+            { "date": "2024-05", "value": 41 },
+            { "date": "2024-08", "value": 41 },
+            { "date": "2024-11", "value": 42 }
+          ]
+        },
+        {
+          "name": "Resting Heart Rate",
+          "value": "58",
+          "unit": "bpm",
+          "status": "green",
+          "citationId": "7",
+          "referenceRange": "<60 bpm excellent"
+        }
+      ]
+    },
+    "biologicalAge": {
+      "title": "Biological Age Markers",
+      "status": "green",
+      "summary": "Biological age younger than chronological age",
+      "metrics": [
+        {
+          "name": "GrimAge",
+          "value": "52",
+          "unit": "years",
+          "status": "green",
+          "citationId": "9",
+          "notes": "3 years younger than chronological age"
+        },
+        {
+          "name": "Telomere Length",
+          "value": "7.2",
+          "unit": "kb",
+          "status": "green",
+          "citationId": "9",
+          "referenceRange": ">6.5 kb favorable"
+        }
+      ]
+    }
+  },
+  "pharmacogenomic": {
+    "drugGeneInteractions": {
+      "title": "Drug-Gene Interactions",
+      "status": "red",
+      "summary": "CYP2C19 poor metabolizer - critical for antiplatelet therapy",
+      "metrics": [
+        {
+          "name": "CYP2C19",
+          "value": "*2/*2 Poor Metabolizer",
+          "status": "red",
+          "citationId": "5",
+          "notes": "Clopidogrel contraindicated - use prasugrel or ticagrelor if antiplatelet needed"
+        },
+        {
+          "name": "SLCO1B1",
+          "value": "*1/*1 Normal Function",
+          "status": "green",
+          "citationId": "5",
+          "notes": "Normal statin metabolism - standard dosing appropriate"
+        },
+        {
+          "name": "CYP3A5",
+          "value": "*3/*3 Poor Metabolizer",
+          "status": "yellow",
+          "citationId": "5",
+          "notes": "May require dose adjustment for certain medications"
+        }
+      ]
+    }
+  },
+  "citations": {
+    "1": {
+      "id": "1",
+      "source": "Quest Diagnostics - Comprehensive Metabolic Panel",
+      "date": "2024-11-10",
+      "type": "lab",
+      "snippet": "Lipid panel, HbA1c, hs-CRP, and metabolic markers"
+    },
+    "2": {
+      "id": "2",
+      "source": "Cleveland HeartLab - Advanced Lipid Testing",
+      "date": "2024-11-12",
+      "type": "lab",
+      "snippet": "Lipoprotein(a), ApoB, Particle number"
+    },
+    "3": {
+      "id": "3",
+      "source": "Cleerly - Coronary CT Angiography",
+      "date": "2024-09-15",
+      "type": "imaging",
+      "snippet": "CAC score 120 Agatston units. Moderate non-obstructive plaque in LAD."
+    },
+    "4": {
+      "id": "4",
+      "source": "Vascular Ultrasound - Carotid Doppler",
+      "date": "2024-09-15",
+      "type": "imaging",
+      "snippet": "Bilateral carotid IMT measurement"
+    },
+    "5": {
+      "id": "5",
+      "source": "GB Longevity100 - Comprehensive Genetic Testing Suite",
+      "date": "2024-09-15",
+      "type": "genetic",
+      "snippet": "Next-generation sequencing with comprehensive analysis of cardiovascular, metabolic, cognitive, and longevity genes. GB HealthWatch, San Diego, CA."
+    },
+    "6": {
+      "id": "6",
+      "source": "Clinical Cognitive Assessment",
+      "date": "2024-08-05",
+      "type": "lab",
+      "snippet": "Montreal Cognitive Assessment (MoCA) administered by neuropsychologist"
+    },
+    "7": {
+      "id": "7",
+      "source": "Dexcom G7 Continuous Glucose Monitor",
+      "date": "2024-11-01 to 2024-11-14",
+      "type": "wearable",
+      "snippet": "14-day CGM data export"
+    },
+    "8": {
+      "id": "8",
+      "source": "VO2 Max Cardiopulmonary Exercise Test",
+      "date": "2024-10-15",
+      "type": "lab",
+      "snippet": "Maximal exercise testing with metabolic cart"
+    },
+    "9": {
+      "id": "9",
+      "source": "TruDiagnostic - Epigenetic Age Testing",
+      "date": "2024-07-10",
+      "type": "lab",
+      "snippet": "DNA methylation analysis for biological age markers"
+    }
+  }
+}
