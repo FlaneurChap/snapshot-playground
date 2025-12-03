@@ -17,7 +17,7 @@ export default function Home() {
             Joe's Gensec Playground
           </h1>
           <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Welcome to my experimental development playground. This is where I test and build cool stuff.
+            Welcome to my experimental development playground. This is where I test and build cool stuff. Auto-deploy from Git is active!
           </p>
         </div>
         <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
