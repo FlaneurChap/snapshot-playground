@@ -2,7 +2,8 @@
 
 import CategoryCard from '@/components/CategoryCard';
 import patientData from '@/data/mockPatient.json';
-import type { PatientData } from '@/types/patient';
+import type { PatientData} from '@/types/patient';
+import PanelTabs from '@/components/dashboard/PanelTabs';
 
 const typedPatientData = patientData as PatientData;
 
@@ -15,7 +16,9 @@ export default function MetabolicPage() {
   };
 
   return (
-    <div className="space-y-6">
+    <div>
+      <PanelTabs />
+      <div className="p-4 space-y-6 max-w-4xl mx-auto">
       <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
         <div className="flex items-center justify-between">
           <div>
@@ -75,6 +78,7 @@ export default function MetabolicPage() {
             </ul>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );

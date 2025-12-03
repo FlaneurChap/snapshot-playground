@@ -3,6 +3,7 @@
 import patientData from '@/data/mockPatient.json';
 import { AlertCircle, User, Calendar, FileText } from 'lucide-react';
 import type { PatientData } from '@/types/patient';
+import PanelTabs from '@/components/dashboard/PanelTabs';
 
 const typedPatientData = patientData as PatientData;
 
@@ -16,7 +17,9 @@ export default function DashboardOverview() {
   ];
 
   return (
-    <div className="space-y-6">
+    <div>
+      <PanelTabs />
+      <div className="p-4 space-y-6 max-w-4xl mx-auto">
       {/* Patient Header */}
       <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
         <div className="flex items-start justify-between">
@@ -142,6 +145,7 @@ export default function DashboardOverview() {
             Lifestyle intervention for pre-diabetes (nutrition + exercise)
           </li>
         </ul>
+      </div>
       </div>
     </div>
   );
